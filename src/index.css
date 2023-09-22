@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(37, 39, 39);
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  user-select: none;
+  /* padding-bottom: 10px; */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.routes-container {
+  flex-grow: 1; /* To push the footer to the bottom */
+  flex-shrink: 0; /* To prevent the footer from getting squeezed */
+  overflow-y: auto; /* To add a scrollbar to the content if needed */
+}
